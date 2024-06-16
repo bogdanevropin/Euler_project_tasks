@@ -1,8 +1,7 @@
-from math import floor
 from math import ceil
 
 
-def is_prime(num, cache={2: True}):
+def is_prime(num, cache: dict = {2: True}):
     if isinstance(num, str):
         num = int(num)
     if num < 2:
@@ -31,6 +30,20 @@ def gen_primes():
         n += 2
         while not is_prime(n):
             n += 2
+
+
+def dividers(n):
+    ans = []
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            ans.append(d)
+            n //= d
+        else:
+            d += 1
+    if n > 1:
+        ans.append(n)
+    return ans
 
 
 def prime_factors(n):

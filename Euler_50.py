@@ -1,4 +1,6 @@
-from Euler_prime_tools import is_prime, gen_primes
+import sys
+
+from tools.Primes import is_prime, gen_primes
 from copy import deepcopy
 
 prime_chain = []
@@ -36,6 +38,7 @@ for prime in gen_primes():
 				print(best_sum, c)
 	else:
 		print(prime)
-		break
+		print(best_sum)
+		sys.exit(1)
 
 

@@ -19,10 +19,10 @@ data1 = ["A","ABILITY","ABLE","ABOUT","ABOVE","ABSENCE","ABSOLUTELY","ACADEMIC",
 
 # print(value('SKY'))
 #
-handle = open("words.txt", "r")
+handle = open("txt/words.txt", "r")
 data2 = handle.read()
-data2 = data.split(',')
-print(data)
+data2 = data2.split(',')
+print(data2)
 
 # sum1 = 0
 # for word in data:
@@ -30,4 +30,4 @@ print(data)
 #         print(word)
 
 print(sum(1 for word in data2 if is_triangle(value(word))))
-print(data3)
+# print(data3)
