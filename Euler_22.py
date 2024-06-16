@@ -1,4 +1,4 @@
-f = open('txt/names.txt', 'r')
+f = open('data/names.txt', 'r')
 d = f.read()
 
 names = d.split(',')

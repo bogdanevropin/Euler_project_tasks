@@ -19,7 +19,7 @@ data1 = ["A","ABILITY","ABLE","ABOUT","ABOVE","ABSENCE","ABSOLUTELY","ACADEMIC",
 
 # print(value('SKY'))
 #
-handle = open("txt/words.txt", "r")
+handle = open("data/words.txt", "r")
 data2 = handle.read()
 data2 = data2.split(',')
 print(data2)
