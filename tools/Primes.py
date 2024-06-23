@@ -93,6 +93,16 @@ def prime_factors_list(n: int) -> list:
     return factors
 
 
+def factors_list(n: int) -> list:
+    factors: list = []
+    top = int(ceil(n ** 0.5))
+    for f in range(1, top + 1):
+        if n % f == 0:
+            factors.append(f)
+            factors.append(n // f)
+    return factors
+
+
 def nth_prime_old(num):
     counter = 2
     for i in range(3, num**2, 2):
