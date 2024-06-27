@@ -12,8 +12,22 @@ Find the smallest prime which,
 by replacing part of the number (not necessarily adjacent digits) with the same digit,
 is part of an eight prime value family.
 """
+from itertools import combinations_with_replacement, combinations, permutations, \
+	product
 
 
-def replace_a_digits(number: str, a):
+def replace_a_digits(number: str, a, ):
 	number_length = len(number)
+	filter_list = [0] * number_length + [1] * number_length
+	# filter_list = [0, 1]
+	print(filter_list)
+	am = 0
+	for i in set(permutations(filter_list)):
+		print(i)
+		am += 1
+	print(am)
+	# print(len(permutations(filter_list)))
 	possible_removed_digits = range(0, number_length)
+
+
+replace_a_digits('100', 2)

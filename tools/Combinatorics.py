@@ -1,5 +1,5 @@
 import math
-
+import itertools
 
 def binomial_coefficient(n, k):
 	return math.comb(n, k)
