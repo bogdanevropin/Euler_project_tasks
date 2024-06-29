@@ -1,9 +1,10 @@
-from Euler.Euler_tools import gen_primes
+from tools.Primes import gen_primes
 from itertools import permutations
 
 length = 4
 primes = gen_primes()
 length_digit_primes = set()
+
 
 def differences_are_the_same(a):
     if len(a) < 3:
@@ -42,6 +43,3 @@ for p in length_digit_primes:
             if differences_are_the_same(s):
                 print(s)
                 print(''.join(str(i) for i in sorted(s)))
-
-
-
