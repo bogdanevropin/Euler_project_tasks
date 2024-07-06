@@ -28,8 +28,9 @@ num = 9
 total_amount = 5
 prime_amount = 3
 prime_percent = prime_amount / total_amount
-size = 3
+size = 5
 current_step = 4
+
 while prime_percent >= 1 / 10:
 	nums = gen_4_nums(current_num=num, step=current_step)
 	# num = nums[-1]
@@ -37,9 +38,9 @@ while prime_percent >= 1 / 10:
 		# print(n)
 		if is_prime(n):
 			prime_amount += 1
-			# print(n, total_amount, prime_amount, prime_percent, size)
+			print(n, total_amount, prime_amount, prime_percent, size)
+	num = nums[-1]
 	total_amount += 4
 	prime_percent = prime_amount / total_amount
 	current_step += 2
-	size = nums[-1]**(1/2)
-print(size)
+print(current_step - 1)
